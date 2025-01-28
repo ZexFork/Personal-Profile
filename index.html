@@ -111,4 +111,16 @@
        </div>
    </div>
 </body>
+    <script>
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault(); // Memblokir klik kanan
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J'))) {
+            e.preventDefault(); // Memblokir Inspect Element
+        }
+    });
+    </script>
+    
 </html>
